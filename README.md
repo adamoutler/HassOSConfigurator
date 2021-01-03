@@ -19,7 +19,7 @@ Click one of the items and install.<br>
 ![image](gitResources/repository.jpg)
 
 
-# Info. 
+# Info
 You will need to disable Info-> Protection Mode for these Add-Ons.
 ![image](gitResources/protectionMode.png)
 
@@ -32,3 +32,7 @@ SSHKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDGTlRAfhm9BIV6l6sOubRgeCY0wRhYQVf
 ```
 After saving, Home Assistant may change your input to look like this
 ![image](gitResources/configuration.png)
+
+
+# Operation
+Hit the start button and observe the logs.  You may uninstall the Add-On when complete. 
