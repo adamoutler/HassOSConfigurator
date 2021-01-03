@@ -1,0 +1,12 @@
+{
+  "name": "HassOS Serial Configurator",
+  "version": "0.1",
+  "slug": "hassos_serial_configurator_addon",
+  "description": "This enables Serial. Make sure to disable Protection Mode!  You can uninstall this when it has run once. Check logs for information.",
+  "arch": ["armhf", "armv7", "aarch64"],
+  "startup": "application",
+  "full_access": "yes",
+  "boot": "auto",
+  "options": {},
+  "schema": {}
+}

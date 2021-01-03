@@ -1,0 +1,16 @@
+{
+  "name": "HassOS SSH port 22222 Configurator",
+  "version": "0.1",
+  "slug": "hassos_ssh_configurator_addon",
+  "description": "This enables the SSH HassOS Console on port 22222. set your SSH Public Key in Configuration.  You can run this multiple times for multiple keys. Make sure to disable Protection Mode!  You can uninstall this when it has run once. Check logs for information.",
+  "arch": ["armhf", "armv7", "aarch64"],
+  "startup": "application",
+  "full_access": "yes",
+  "boot": "auto",
+ "options": {
+    "SSHKey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDGTlRAfhm9BIV6l6sOubRgeCY0wRhYQVfB3QBWFl2ELpeAnTHwRYY+4pSP1Nu7FuZqAzDyZkssmFkbXHJGqi6EAnAkRLsKhzvDKo5WSXfEQdl2kSN5bgU/e37GfwqG4ChEfY56gwu+tdHtt4eIrzKpmUKqFZWJaGoeI9sHptQR9QNitEsm0krkOcK0VLFLTeau+HOO1A4plcLjBB9Y43SFjth/Ouke+DVGaBO2LYNc8U0S4EiHT6KdRXS4iIwYjXMw6SEsT7eP9IWQObQ4ZgyG0cHO/6ArxJ0fyOcAI29sLzM9466ID0mTaJWHriTRf6Lxhpdd/S30VTG0JMTdo/Fj root@HLAB-A17"
+  },
+  "schema": {
+    "SSHKey": "str"
+  }
+}
