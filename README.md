@@ -1,4 +1,4 @@
-# Projects
+# Addon Repository
 This an addon repository for HassOS Configurator projects.  These projects perform configuration tasks.<br>
 
 All projects require a reboot and may be uninstalled after the first successful run.  Please observe logs to determine if the run was successful. 
