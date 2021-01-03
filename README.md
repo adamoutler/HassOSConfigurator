@@ -1,52 +1,34 @@
-![image](gitResources/activecooling.jpg)
+# Projects
+This an addon repository for HassOS Configurator projects.  These projects perform configuration tasks.<br>
 
-This is an addon for DeskPi Pro in Home Assistant.  It's essentially a script that runs in a docker container.  It enables and automates the DeskPi Pro Active Cooling System with your specifications.<br>
+All projects require a reboot and may be uninstalled after the first successful run.  Please observe logs to determine if the run was successful. 
+
+## HassOS I2C Configurator
+Enables the Raspberry Pi Serial Bus. 
+
+## HassOS Serial Configurator
+Enables the Raspberry Pi 4 Serial Port. Instead of Device Mode, the port becomes Host Mode for utilization by the Operating System.
+
+## HassOS SSH port 22222 Configurator
+Places an authorized_keys file in the location required by HassOS at boot time to enable the SSH port 22222. 
 
 # Installation
 Within Home Assistant, click Supervisor-> Add-on Store -> … button (in top left)-> Repositories. Add this repository. 
 
-Click DeskPi Pro Temp Control and install.<br>
-![image](gitResources/addonSelect.png)
+Click one of the items and install.<br>
+![image](gitResources/repository.jpg)
+
+
+# Info. 
+You will need to disable Info-> Protection Mode for these Add-Ons.
+![image](gitResources/protectionMode.png)
+
 
 # Configuration
-![image](gitResources/Configuration.png)
-## Celcius or Farenheit
-Choose Celcius or Farenheit.
-* **CorF** - Configures Celcius or Fahrenheit.
+Currently, only HassOS SSH Port 22222 Configurator requires configuration. Copy your public key into the configurator in a single line as such
 
-## Temperature Ranges
-![image](gitResources/FanRangeExplaination.png)
-
-Set your fan ranges appropriately. 
-* **LowRange** Minimum Temperature to turn on 33%. Temperatures less than this value will turn the fan off.
-* **MediumRange** to be the temperature divider between 33 and 66%.
-* **HighRange** to be the maximum temperature before 100% fan.
-
-
-# Enable Serial
-In order to enable Serial, you must add ```dtoverlay=dwc2,dr_mode=host``` to your config.txt.  You can do this from a computer, a terminal addon, or from the hassio main terminal.
-
-## Edit config.txt method 
-plug your sdcard or memory stick into a computer and modify the config.txt file.
 ```
-dtoverlay=dwc2,dr_mode=host
+SSHKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDGTlRAfhm9BIV6l6sOubRgeCY0wRhYQVfB3QBWFl2ELpeAnTHwRYY+4pSP1Nu7FuZqAzDyZkssmFkbXHJGqi6EAnAkRLsKhzvDKo5WSXfEQdl2kSN5bgU/e37GfwqG4ChEfY56gwu+tdHtt4eIrzKpmUKqFZWJaGoeI9sHptQR9QNitEsm0krkOcK0VLFLTeau+HOO1A4plcLjBB9Y43SFjth/Ouke+DVGaBO2LYNc8U0S4EiHT6KdRXS4iIwYjXMw6SEsT7eP9IWQObQ4ZgyG0cHO/6ArxJ0fyOcAI29sLzM9466ID0mTaJWHriTRf6Lxhpdd/S30VTG0JMTdo/Fj  root@HLAB-A17"
 ```
-
-## Terminal Addon method
-If you have a terminal addon, you can disable protection mode and execute the following. 
-
-### Built-in hard drive
-```mount /dev/sda1 /mnt
-echo 'dtoverlay=dwc2,dr_mode=host' >> /mnt/config.txt
-```
-### SDCard
-```mount /dev/mmcblk0p1 /mnt
-echo 'dtoverlay=dwc2,dr_mode=host' >> /mnt/config.txt
-```
-
-## Hassio Main Terminal
-Login to the main terminal, then at the ha> prompt, type "login". 
-```
-echo 'dtoverlay=dwc2,dr_mode=host' >> /mnt/boot/config.txt
-```
-# HassOSConfigurator
+After saving, Home Assistant may change your input to look like this
+![image](gitResources/configuration.png)
