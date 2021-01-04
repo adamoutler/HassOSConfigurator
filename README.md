@@ -4,7 +4,7 @@ This an addon repository for HassOS Configurator projects.  These projects perfo
 All projects require a reboot and may be uninstalled after the first successful run.  Please observe logs to determine if the run was successful. 
 
 ## HassOS I2C Configurator
-Enables the Raspberry Pi Serial Bus. 
+Enables the Raspberry Pi I<sup>2</sup>C bus Bus. 
 
 ## HassOS Serial Configurator
 Enables the Raspberry Pi 4 Serial Port. Instead of Device Mode, the port becomes Host Mode for utilization by the Operating System.
