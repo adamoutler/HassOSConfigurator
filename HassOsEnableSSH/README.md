@@ -4,5 +4,9 @@ Places an authorized_keys file in the location required by HassOS at boot time t
 
 You can connect an SDCard and up to two hard disks or USB drives, which are detected as sda or sdb, and they will all have HassOS SSH port 22222 enabled. 
 
+# Support
+Support is provided on the Home Assistant Community forums, [here](https://github.com/adamoutler/HassOSConfigurator/tree/main/HassOsEnableSSH)
+
 # Operation
 Hit the start button and observe the logs.  You may uninstall the Add-On when complete. 
+
