@@ -24,10 +24,6 @@ You will need to disable Info-> Protection Mode for these Add-Ons.
 ![image](gitResources/protectionMode.png)
 
 
-# Configuration
-Currently, only HassOS SSH Port 22222 Configurator requires configuration. Copy your public key into the configurator in a single line as such
-
-
 # Operation
 Hit the start button and observe the logs.  You may uninstall the Add-On when complete. 
 
