@@ -37,7 +37,7 @@ set +e
     fi
   }
   if [ $(ls /dev/i2c-1) ]; then 
-    ls /dev/
+    echo $(ls /dev/)
     echo "Found i2c access!  Nothing to do!  You can remove this add-on.";
   else 
     echo "I don't see I2C."
