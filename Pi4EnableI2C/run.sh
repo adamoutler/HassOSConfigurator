@@ -36,11 +36,17 @@ set +e
       echo "no $partition config found"
     fi
   }
-
-  performWork sda1
-  performWork sdb1
-  performWork mmcblk0p1
-
-  echo "This Configurator did it's job.  You can uninstall and reboot now.  This configurator only works once."
+  if [ $(ls /dev/i2c-1) ]; then 
+    ls /dev/
+    echo "Found i2c access!  Nothing to do!  You can remove this add-on.";
+  else 
+    echo "I don't see I2C."
+    performWork sda1
+    performWork sdb1
+    performWork mmcblk0p1
+    echo "This Configurator did it's job. Perform a hard-power-off reboot now."
+    echo "You will need to reboot twice total, once to place the files, and again to activate the I2C."
+  fi
+  
   sleep 99999;
 done
