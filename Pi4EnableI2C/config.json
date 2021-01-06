@@ -5,7 +5,9 @@
   "description": "This enables i2c. Make sure to disable Protection Mode!  You can uninstall this when it has run once. Check logs for information.",
   "arch": ["armhf", "armv7", "aarch64"],
   "startup": "application",
-  "full_access": "yes",
+  "apparmor": "false",
+  "devices": ["/dev/sda1:/dev/sda1:rwm","/dev/sdb1:/dev/sdb1:rwm","/dev/mmcblk0p1:/dev/mmcblk0p1:rwm"],
+  "privileged": ["SYS_ADMIN"],
   "boot": "auto",
   "options": {},
   "schema": {}
