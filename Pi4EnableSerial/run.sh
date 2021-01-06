@@ -7,7 +7,7 @@ until false; do
 set +e
   mkdir /tmp 2>/dev/null
   mkdir /tmp/mmcblk0p1 /tmp/sda1 2> /dev/null
-  if [ ! -e /dev/sda ] && [ ! -e /dev/mmcblk0p1 ]; then 
+  if [ ! -e /dev/sda1 ] && [ ! -e /dev/sdb1 ] && [ ! -e /dev/mmcblk0p1 ]; then 
     echo "nothing to do. Is protection mode enabled?  You can't run this without disabling protection mode";
     exit
   fi;
