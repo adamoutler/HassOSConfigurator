@@ -1,12 +1,14 @@
 #!/usr/bin/with-contenv bashio
-
-
+whoami
+id
 
 config='dtparam=i2c_vc=on'
 config2='dtparam=i2c_arm=on'
 until false; do
 set +e
   mkdir /tmp 2>/dev/null
+
+  ls -al /dev/ 2>1
   mkdir /tmp/mmcblk0p1 /tmp/sda1 2> /dev/null
   if [ ! -e /dev/sda1 ] && [ ! -e /dev/sdb1 ] && [ ! -e /dev/mmcblk0p1 ]; then 
     echo "nothing to do. Is protection mode enabled?  You can't run this without disabling protection mode";
@@ -16,7 +18,12 @@ set +e
 
   performWork () {
     partition=$1
-    mount /dev/$partition /tmp/$partition 2>/dev/null
+    if [ ! -e /dev/$partition ]; then
+       echo "no $partition available"
+       return;
+    fi
+    umount /tmp/$partition 2>/dev/null
+    mount /dev/$partition /tmp/$partition 
     if [ -e /tmp/$partition/config.txt ]; then
       mkdir -p /tmp/$partition/CONFIG/modules
       echo i2c-dev >/tmp/$partition/CONFIG/modules/rpi-i2c.conf

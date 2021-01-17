@@ -1,14 +1,16 @@
 {
   "name": "HassOS I2C Configurator",
-  "version": "0.2",
-  "slug": "hassos_i2c_configurator_addon",
-  "description": "This enables i2c. Make sure to disable Protection Mode!  You can uninstall this when it has run once. Check logs for information.",
+  "version": "0.6",
+  "slug": "hassosi2cconfiguratoraddon",
+  "description": "This enables i2c. You can uninstall this when it has run once. Check logs for information.",
   "arch": ["armhf", "armv7", "aarch64"],
   "startup": "application",
-  "apparmor": "false",
   "devices": ["/dev/sda1:/dev/sda1:rwm","/dev/sdb1:/dev/sdb1:rwm","/dev/mmcblk0p1:/dev/mmcblk0p1:rwm","/dev/i2c-1:/dev/i2c-1:rwm"],
-  "privileged": ["SYS_ADMIN"],
+  "full_access": false,
+  "url":"https://community.home-assistant.io/t/add-on-hassos-i2c-configurator/264167",
   "boot": "auto",
+  "auth_api": true,
+  "privileged":["SYS_ADMIN"],
   "options": {},
   "schema": {}
 }
