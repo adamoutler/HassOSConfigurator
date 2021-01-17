@@ -8,7 +8,7 @@ set +e
   mkdir /tmp/mmcblk0p1 /tmp/sda1 2> /dev/null
   if [ ! -e /dev/sda1 ] && [ ! -e /dev/mmcblk0p1 ]  && [ ! -e /dev/sdb1 ] ; then 
     echo "nothing to do. I can't find a /dev/sda1, /dev/sdb1, or /dev/mmcblk0p1";
-    exit;
+    while true; do sleep 99999; done;
   fi;
 
 
