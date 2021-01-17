@@ -16,7 +16,7 @@ set +e
   performWork () {
     partition=$1
     mount /dev/$partition /tmp/$partition 2>/dev/null
-    if [ -e /tmp/$partition/config.txt ]; then
+    if [ -e /tmp/$partition/cmdline.txt ]; then
       if [ $(grep "$key" /tmp/$partition/config.txt) ]; then
         echo "already added this key to $partition";
         return;
