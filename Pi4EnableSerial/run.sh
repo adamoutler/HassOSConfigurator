@@ -9,7 +9,8 @@ set +e
   mkdir /tmp/mmcblk0p1 /tmp/sda1 2> /dev/null
   if [ ! -e /dev/sda1 ] && [ ! -e /dev/sdb1 ] && [ ! -e /dev/mmcblk0p1 ]; then 
     echo "nothing to do. Is protection mode enabled?  You can't run this without disabling protection mode";
-    exit
+    while true; do sleep 99999; done;
+
   fi;
 
 
