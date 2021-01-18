@@ -21,12 +21,15 @@
   "video":true,
   "gpio":true,
   "stdin":true,
-  "devices": ["/mnt:/mnt:rwm"],
   "full_access": "yes",
   "boot": "auto",
   "devicetree": true,
   "usb": true,
   "map": ["config:rw", "ssl:rw","addons:rw","media:rw","backup:rw","share:rw"],
-  "options": {"command":"ls"},
-  "schema": {"command":"str"}
+  "options": {"command":"ls",
+              "container":"homeassistant:"
+             },
+  "schema": { "command":"str",
+             "container":"str"
+            }
 }
