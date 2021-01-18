@@ -8,5 +8,7 @@ You can connect an SDCard and up to two hard disks or USB drives, which are dete
 Support is provided on the Home Assistant Community forums, [here](https://community.home-assistant.io/t/add-on-hassos-ssh-port-22222-configurator/264109)
 
 # Operation
+**Important Note** when requested to reboot, choose Supervisor->Reboot Host or pull the power plug from your machine and restart it. 
+
 Hit the start button and observe the logs.  You may uninstall the Add-On when complete. 
 
