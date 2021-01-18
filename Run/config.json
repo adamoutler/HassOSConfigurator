@@ -5,7 +5,6 @@
   "description": "This runs things at startup. Make sure to disable Protection Mode if you need to! Check logs for information.",
   "arch": ["i386", "amd64", "armhf", "armv7", "aarch64"],
   "startup": "application",
-  "apparmor": false,
   "url": "http://adamoutler.com",
   "host_network": true,
   "host_ipc": true,
