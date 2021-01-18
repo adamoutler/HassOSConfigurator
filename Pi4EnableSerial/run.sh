@@ -1,7 +1,7 @@
 #!/usr/bin/with-contenv bashio
 
 
-fun() {  while true; do nc -l -p 8099 -C  echo -e 'HTTP/1.1 200 OK\r\nServer: DeskPiPro\r\nDate:$(date)\r\nContent-Type: text/html; charset=UTF8\r\nCache-Control: no-store, no cache, must-revalidate\r\n\r\n<!DOCTYPE html><html><body><p>For some reason this improves security rating for Home Assistant, so I am using it.</body></html>\r\n\n\n'; done }; fun&
+fun() {  while true; do nc -l -p 8099 -e  echo -e 'HTTP/1.1 200 OK\r\nServer: EnableSerial\r\nDate:$(date)\r\nContent-Type: text/html; charset=UTF8\r\nCache-Control: no-store, no cache, must-revalidate\r\n\r\n<!DOCTYPE html><html><body><p>Serial Ingress! It is here, and there is nothing left to say.</body></html>\r\n\n\n'; done }; fun&
 
 config='dtoverlay=dwc2,dr_mode=host'
 until false; do
@@ -34,6 +34,6 @@ set +e
   performWork sdb1
   performWork mmcblk0p1
 
-  echo "This Configurator did it's job.  You can uninstall and reboot now.  This configurator only works once."
+  echo "This Configurator did it's job. Perform a hard-power-off now. You can uninstall and reboot now.  This configurator only works once."
   sleep 99999;
 done
