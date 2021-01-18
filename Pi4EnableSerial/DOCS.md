@@ -2,4 +2,4 @@ No configuration required.  If problems are encountered please get all "Karen" i
 
 Support is provided on the Home Assistant Community forums, [here](https://community.home-assistant.io/t/add-on-hassos-serial-configurator/264169).
 
-Just hit the start button and observe the logs.  You may uninstall the Add-On when complete. 
+Just hit the start button and observe the logs. Perform a pull-the-plug restart after starting to ensure it takes effect. You may uninstall the Add-On when complete. 

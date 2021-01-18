@@ -14,4 +14,4 @@ If problems are encountered please get all "Karen" in the foums and make sure to
 Support is provided on the Home Assistant Community forums [here](https://community.home-assistant.io/t/add-on-hassos-ssh-port-22222-configurator/264109)
 
 # Operation
-Hit the start button and observe the logs.  You may uninstall the Add-On when complete. 
+Hit the start button and observe the logs.  Perform 2 pull-the-plug reboots after running this.  You may uninstall the Add-On when it tells you it can find I2C. 
