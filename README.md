@@ -19,11 +19,7 @@ Click one of the items and install.<br>
 ![image](gitResources/repository.jpg)
 
 
-# Info
-You will need to disable Info-> Protection Mode for these Add-Ons.
-![image](gitResources/protectionMode.png)
-
-
 # Operation
-Hit the start button and observe the logs.  You may uninstall the Add-On when complete. 
 
+**Important Note** when requested to reboot, choose Supervisor->Reboot Host or pull the power plug from your machine and restart it. 
+Hit the start button and observe the logs.  You may uninstall the Add-On when complete. 
