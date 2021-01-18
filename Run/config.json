@@ -21,7 +21,6 @@
   "audio":true,
   "video":true,
   "gpio":true,
-  "usb": true,
   "stdin":true,
   "devices": ["/mnt:/mnt:rwm"],
   "full_access": "yes",
