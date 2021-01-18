@@ -33,6 +33,6 @@ set +e
   performWork sdb1
   performWork mmcblk0p1
 
-  echo "This Configurator did it's job.  You can uninstall and reboot now.  This configurator only works once."
+  echo "This Configurator did it's job.  You can uninstall and supervisor->reboot host, or power down and back on now. Make sure to FULLY reboot.  This configurator only works once."
   sleep 99999;
 done
