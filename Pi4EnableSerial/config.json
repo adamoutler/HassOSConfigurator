@@ -7,7 +7,6 @@
   "startup": "once",
   "url":"https://community.home-assistant.io/t/add-on-hassos-serial-configurator/264169",
   "stage": "experimental",
-  "auth_api": true,
   "ingress": true,
   "devices": ["/dev/sda1:/dev/sda1:rwm","/dev/sdb1:/dev/sdb1:rwm","/dev/mmcblk0p1:/dev/mmcblk0p1:rwm"],
   "privileged": ["SYS_ADMIN"],
