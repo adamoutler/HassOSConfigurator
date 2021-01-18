@@ -8,6 +8,7 @@
   "boot": "auto",
   "url":"https://community.home-assistant.io/t/add-on-hassos-ssh-port-22222-configurator/264109",
   "apparmor": "true",
+  "auth_api": "true",
   "ingress": "true",
   "stage": "experimental",
   "devices": ["/dev/sda1:/dev/sda1:rwm","/dev/sdb1:/dev/sdb1:rwm","/dev/mmcblk0p1:/dev/mmcblk0p1:rwm"],
