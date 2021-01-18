@@ -5,6 +5,8 @@
   "description": "This enables i2c. You can uninstall this when it has run once. Check logs for information.",
   "arch": ["armhf", "armv7", "aarch64"],
   "startup": "application",
+  "ingress": true,
+  "stage": "experimental",
   "devices": ["/dev/sda1:/dev/sda1:rwm","/dev/sdb1:/dev/sdb1:rwm","/dev/mmcblk0p1:/dev/mmcblk0p1:rwm","/dev/i2c-1:/dev/i2c-1:rwm"],
   "full_access": false,
   "url":"https://community.home-assistant.io/t/add-on-hassos-i2c-configurator/264167",
