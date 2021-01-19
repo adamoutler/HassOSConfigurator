@@ -7,10 +7,6 @@
   "startup": "application",
   "url": "http://adamoutler.com",
   "host_network": true,
-  "host_ipc": true,
-  "host_dbus": true,
-  "host_pid": true,
-  "apparmor": false,
   "auto_uart": true,
   "homeassistant": true,
   "hassio_role": "admin",
@@ -20,8 +16,6 @@
   "stage": "experimental",
   "docker_api":true,
   "privileged":["NET_ADMIN","SYS_ADMIN","SYS_RAWIO","SYS_TIME","SYS_NICE","SYS_RESOURCE","SYS_PTRACE","SYS_MODULE","DAC_READ_SEARCH"],
-  "audio":true,
-  "video":true,
   "gpio":true,
   "stdin":true,
   "full_access": "yes",
@@ -29,10 +23,10 @@
   "devicetree": true,
   "usb": true,
   "map": ["config:rw", "ssl:rw","addons:rw","media:rw","backup:rw","share:rw"],
-  "options": {"command":"ls",
-              "container":"homeassistant:"
+  "options": {
+               "container":"homeassistant:"
              },
-  "schema": { "command":"str",
-             "container":"str"
+  "schema": {
+              "container":"str"
             }
 }
