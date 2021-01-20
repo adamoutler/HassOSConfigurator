@@ -22,7 +22,7 @@ sleep $delay;
 
 #Get containers
 echo "Listing Containers."
-containers=$(docker container ls|awk '{print $2}'| sed -e 's|.*/||' -e 's/:.*//'|grep -v '^ID$')
+containers=$(docker ps --format "{{.Names}}")
 for container in $containers; do 
   echo $container;
   if [ $createScripts == "true" ]; then 
@@ -37,8 +37,8 @@ mkdir -p /config/startup/logs
 
 #Set the environment to continue executing and start running all the scripts
 for container in $containers; do
-  containerid=$(docker container ls|grep "$container"|awk '{print $1}');
-  if [ ! -e /config/startup/startup.d/$container.sh ]; then 
+  containerid=$(ps -aqf "name=$container")
+  if [ ! -e /config/startup/startup.d/$container.sh ]; then
     continue;
   fi
   echo "#############################################################################";
@@ -47,7 +47,8 @@ for container in $containers; do
   echo "#############################################################################"
   docker cp /config/startup/startup.d/$container.sh $containerid:/tmp/$container.startup.sh;
   docker exec -t $containerid chmod 755 /tmp/$container.startup.sh;
-  docker exec -t $containerid exec /tmp/$container.startup.sh 2>&1 | tee $logOption /config/startup/logs/$container.log;
+  docker exec -t $containerid exec /tmp/$container.startup.sh 2>&1 | tee $logOption /config/startup/logs/$container.log &
+  sleep 1;
 done;
 set -e
 echo;echo;echo;echo;
