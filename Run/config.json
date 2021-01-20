@@ -1,6 +1,6 @@
 {
   "name": "HassOS Run On Startup Configurator",
-  "version": "0.1",
+  "version": "0.2",
   "slug": "hassos_run_on_startup_configurator_addon",
   "description": "This runs things at startup. Make sure to disable Protection Mode if you need to! Check logs for information.",
   "arch": ["i386", "amd64", "armhf", "armv7", "aarch64"],
