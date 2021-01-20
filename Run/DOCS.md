@@ -17,7 +17,7 @@ Logs may be found in the home assistant configuration folder, usually /config/st
 |Retain old logs in /config/startup/logs/ instead of deleting old logs|lowercase true/false| If true, logs will be appended. Otherwise, logs will be replaced on each startup. |
 
 ## Support
-Support is provided on the Home Assistant Community forums.  Git Issues may be ignored.
+Support is provided on the [Home Assistant Community forums](https://community.home-assistant.io/t/run-on-startup-d/271008).  Git Issues may be ignored.
 
 If problems are encountered please get all "Karen" in the foums and make sure to display attitude, because developers love that.  Alternatively, you can provide a log and tell us the problem, what you did, the model of your device, and what happened differently than what you expected.
 

@@ -4,7 +4,7 @@ This Home Assistant Addon allows you to perform startup scripts for each contain
 **Warning**- Proceed at your own risk. Your scripts will run as root and have the capability of destroying your machine. 
 
 # Support
-Support is provided on the Home Assistant Community forums, [here](https://community.home-assistant.io/t/add-on-hassos-serial-configurator/264169)
+Support is provided on the Home Assistant Community forums, [here](https://community.home-assistant.io/t/run-on-startup-d/271008)
 
 # Operation
 Hit the start button and observe the logs. Perform a pull-the-plug restart after starting to ensure it takes effect.  You may uninstall the Add-On when complete. 
