@@ -16,6 +16,7 @@ fi
 #Sleep for delay period
 delay=$(cat options.json |jq -r '."Seconds to wait before startup scripts execute"')
 createScripts=$(cat options.json |jq -r '."Create example scripts in /config/startup/startup.d"')
+test $(cat options.json |jq -r '."Retain old logs in /config/startup/logs/ instead of deleting old logs"') == "true" && logOption="-a"
 echo "Sleeping for Startup Delay period of $delay seconds"
 sleep $delay;
 
@@ -32,7 +33,7 @@ done;
 #Start running
 echo "executing";
 mkdir -p /config/startup/startup.d
-
+mkdir -p /config/startup/logs
 
 #Set the environment to continue executing and start running all the scripts
 for container in $containers; do
@@ -43,7 +44,7 @@ for container in $containers; do
   echo "#############################################################################"
   docker cp /config/startup/startup.d/$container.sh $containerid:/tmp/$container.startup.sh;
   docker exec -t $containerid chmod 755 /tmp/$container.startup.sh;
-  docker exec -t $containerid exec /tmp/$container.startup.sh;
+  docker exec -t $containerid exec /tmp/$container.startup.sh 2>&1 | tee $logOption /config/startup/logs/$container.log;
 done;
 set -e
 echo;echo;echo;echo;
