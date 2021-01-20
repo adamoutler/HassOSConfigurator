@@ -2,18 +2,49 @@
 
 PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
-
-command=$(cat options.json |jq -r '.command');
-container=$(cat options.json |jq -r '.container');
-
-echo "executing";
+#Test docker access
+echo "Testing Docker access.";
 set +e
-echo " Switching to Home Assistant environment and execting script at \"/config/startup/runme.sh\""
-mkdir -p /config/startup
 
-#test ! docker container ls 2>&1 >/dev/null && echo "you must disable protection mode" && exit
-test ! -e /config/startup/runme.sh && echo "echo this is the example script \nenv\nls /\n echo you can find the example in /config/startup/runme.sh and modify it for your own purposes">/config/startup/runme.sh
-docker exec -t $(docker container ls|grep "$container"|awk '{print $1}') bash /config/startup/runme.sh
+## Test for docker access
+docker container ls 2>&1>/dev/null;
+if [ $? != 0 ]; then
+ echo "You must disable protection mode. sleeping..."
+ while true; do sleep 9999; done;
+fi
+
+#Sleep for delay period
+delay=$(cat options.json |jq -r '."Seconds to wait before startup scripts execute"')
+createScripts=$(cat options.json |jq -r '."Create example scripts in /config/startup/startup.d"')
+echo "Sleeping for Startup Delay period of $delay seconds"
+sleep $delay;
+
+#Get containers
+echo "Listing Containers."
+containers=$(docker container ls|awk '{print $2}'| sed -e 's|.*/||' -e 's/:.*//'|grep -v '^ID$')
+for container in $containers; do 
+  echo $container;
+  if [ $createScripts == "true" ]; then 
+    test ! -e /config/startup/startup.d/$container.sh && echo -e "#! /bin/bash\n\necho \"This script is executed in the $container container\"; \nenv;">/config/startup/startup.d/$container.sh
+  fi
+done;
+
+#Start running
+echo "executing";
+mkdir -p /config/startup/startup.d
+
+
+#Set the environment to continue executing and start running all the scripts
+for container in $containers; do
+  containerid=$(docker container ls|grep "$container"|awk '{print $1}');
+  echo "#############################################################################";
+  echo "###############/config/startup/startup.d/$container.sh";
+  echo "###############Container: $containerid: tmp/$container.startup.sh";
+  echo "#############################################################################"
+  docker cp /config/startup/startup.d/$container.sh $containerid:/tmp/$container.startup.sh;
+  docker exec -t $containerid chmod 755 /tmp/$container.startup.sh;
+  docker exec -t $containerid exec /tmp/$container.startup.sh;
+done;
 set -e
 echo;echo;echo;echo;
 echo "----DONE----  sleeping...";

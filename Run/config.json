@@ -24,9 +24,11 @@
   "usb": true,
   "map": ["config:rw", "ssl:rw","addons:rw","media:rw","backup:rw","share:rw"],
   "options": {
-               "container":"homeassistant:"
+               "Seconds to wait before startup scripts execute":"60",
+               "Create example scripts in /config/startup/startup.d":true
              },
   "schema": {
-              "container":"str"
+              "Seconds to wait before startup scripts execute":"int(0,9999999)",
+              "Create example scripts in /config/startup/startup.d":"bool"
             }
 }
