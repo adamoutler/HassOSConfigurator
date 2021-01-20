@@ -25,7 +25,7 @@
   "map": ["config:rw", "ssl:rw","addons:rw","media:rw","backup:rw","share:rw"],
   "options": {
                "Seconds to wait before startup scripts execute":"60",
-               "Create example scripts in /config/startup/startup.d":true,
+               "Create example scripts in /config/startup/startup.d":false,
                "Retain old logs in /config/startup/logs/ instead of deleting old logs":true
              },
   "schema": {

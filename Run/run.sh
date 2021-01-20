@@ -38,6 +38,9 @@ mkdir -p /config/startup/logs
 #Set the environment to continue executing and start running all the scripts
 for container in $containers; do
   containerid=$(docker container ls|grep "$container"|awk '{print $1}');
+  if [ ! -e /config/startup/startup.d/$container.sh ]; then 
+    continue;
+  fi
   echo "#############################################################################";
   echo "###############/config/startup/startup.d/$container.sh";
   echo "###############Container: $containerid: tmp/$container.startup.sh";
