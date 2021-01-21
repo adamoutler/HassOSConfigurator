@@ -37,7 +37,7 @@ mkdir -p /config/startup/logs
 
 #Set the environment to continue executing and start running all the scripts
 for container in $containers; do
-  containerid=$(ps -aqf "name=$container")
+  containerid=$(docker ps -aqf "name=$container")
   if [ ! -e /config/startup/startup.d/$container.sh ]; then
     continue;
   fi
