@@ -1,5 +1,6 @@
 | Version | Change |
 |---|---|
+| 0.6 | Support for x86
 | 0.5 | Incresed security to absolute maximum because, why not? |
 | 0.4 | fixed docker error with cache |
 | 0.3 | Supporting odroid |
