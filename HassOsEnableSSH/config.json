@@ -3,7 +3,7 @@
   "version": "0.5",
   "slug": "hassos_ssh_configurator_addon",
   "description": "This enables the SSH HassOS Console on port 22222. set your SSH Public Key in Configuration.  You can run this multiple times for multiple keys. Make sure to disable Protection Mode!  You can uninstall this when it has run once. Check logs for information.",
-  "arch": ["armhf", "armv7", "aarch64"],
+  "arch": ["x86_64","armhf", "armv7", "aarch64"],
   "startup": "once",
   "boot": "manual",
   "url":"https://community.home-assistant.io/t/add-on-hassos-ssh-port-22222-configurator/264109",
