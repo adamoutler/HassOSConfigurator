@@ -20,6 +20,9 @@ test $(cat options.json |jq -r '."Retain old logs in /config/startup/logs/ inste
 echo "Sleeping for Startup Delay period of $delay seconds"
 sleep $delay;
 
+#Log server
+nc -lk -p 8099 -e  exec /opt/logcontent.sh 3>/dev/null &
+
 #Get containers
 echo "Listing Containers."
 containers=$(docker ps --format "{{.Names}}")
