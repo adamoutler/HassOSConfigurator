@@ -2,7 +2,7 @@
   "name": "Run On Startup.d",
   "version": "0.4",
   "slug": "run_on_startup_addon",
-  "description": "This runs things at startup. Make sure to disable Protection Mode if you need to! Check logs for information.",
+  "description": "This runs things at startup. Disable Protection Mode! Check logs and ingress for information.",
   "arch": ["i386", "amd64", "armhf", "armv7", "aarch64"],
   "startup": "application",
   "url": "https://community.home-assistant.io/t/run-on-startup-d/271008",
@@ -13,6 +13,7 @@
   "hassio_api": true,
   "auth_api": true,
   "homeassistant_api":true,
+  "ingress": true,
   "stage": "experimental",
   "docker_api":true,
   "privileged":["NET_ADMIN","SYS_ADMIN","SYS_RAWIO","SYS_TIME","SYS_NICE","SYS_RESOURCE","SYS_PTRACE","SYS_MODULE","DAC_READ_SEARCH"],
@@ -24,7 +25,7 @@
   "usb": true,
   "map": ["config:rw", "ssl:rw","addons:rw","media:rw","backup:rw","share:rw"],
   "options": {
-               "Seconds to wait before startup scripts execute":"60",
+               "Seconds to wait before startup scripts execute":"1",
                "Create example scripts in /config/startup/startup.d":false,
                "Retain old logs in /config/startup/logs/ instead of deleting old logs":true
              },
