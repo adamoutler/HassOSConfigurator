@@ -32,13 +32,13 @@ set +e
       mkdir -p /tmp/$partition/CONFIG/modules
       echo i2c-dev >/tmp/$partition/CONFIG/modules/rpi-i2c.conf
       if [ $(grep "$config" /tmp/$partition/config.txt|grep -v \#) ]; then
-        echo "i2c already configured on $partition. Reboot required".;
+        echo "i2c already configured on $partition. Reboot required.";
       else
         echo "adding $config to $partition config.txt"
         echo "$config">>/tmp/$partition/config.txt
       fi
       if [ $(grep "$config2" /tmp/$partition/config.txt|grep -v \#) ]; then
-        echo "i2c already configured on $partition. This is the second time the addon was run without rebooting.";
+        echo "i2c already configured on $partition. This addon was already run during this boot and no reboot occurred.";
       else
         echo "adding $config2 to $partition config.txt"
         echo "$config2">>/tmp/$partition/config.txt
