@@ -38,7 +38,7 @@ set +e
         echo "$config">>/tmp/$partition/config.txt
       fi
       if [ $(grep "$config2" /tmp/$partition/config.txt|grep -v \#) ]; then
-        echo "i2c already configured on $partition. This addon was already run during this boot and no reboot occurred.";
+        echo "i2c already configured on $partition. This addon was already run during this boot and no reboot occurred. ";
       else
         echo "adding $config2 to $partition config.txt"
         echo "$config2">>/tmp/$partition/config.txt
