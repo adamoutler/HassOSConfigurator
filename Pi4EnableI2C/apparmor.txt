@@ -28,8 +28,11 @@ profile hassosi2cconfiguratoraddon flags=(attach_disconnected,mediate_deleted) {
   /proc/self/attr/** mrwkl,
   # Files required
   /dev/sda1 mrwkl,
+  /dev/sda2 mrkwl,
   /dev/sdb1 mrwkl,
+  /dev/sdb2 mrkwl,
   /dev/mmcblk0p1 mrwkl,
+  /dev/mmcblk0p1 mrkwl,
   /dev/* mrwkl,
   
   # Data access
