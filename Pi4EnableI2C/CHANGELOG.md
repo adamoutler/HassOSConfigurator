@@ -1,5 +1,6 @@
 | Version | Change |
 |---|---|
+| 0.9 | Support for Raspian |
 | 0.8 | Do not run on startup |
 | 0.7 | Incresed security to absolute maximum because, why not? |
 | 0.6 | Testing increased security |
