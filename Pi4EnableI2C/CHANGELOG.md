@@ -1,5 +1,6 @@
 | Version | Change |
 |---|---|
+| 0.10 | Support new Addon API |
 | 0.9 | Support for Raspian |
 | 0.8 | Do not run on startup |
 | 0.7 | Incresed security to absolute maximum because, why not? |

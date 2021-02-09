@@ -1,6 +1,6 @@
 {
   "name": "HassOS I2C Configurator",
-  "version": "0.9",
+  "version": "0.10",
   "slug": "hassosi2cconfiguratoraddon",
   "description": "This enables i2c. You can uninstall this when it has run once. Check logs for information.",
   "arch": ["armhf", "armv7", "aarch64"],
@@ -8,7 +8,7 @@
   "auth_api": true,
   "ingress": true,
   "stage": "experimental",
-  "devices": ["/dev/sda1:/dev/sda1:rwm","/dev/sda2:/dev/sda2:rwm","/dev/sdb1:/dev/sdb1:rwm","/dev/mmcblk0p1:/dev/mmcblk0p1:rwm","/dev/i2c-1:/dev/i2c-1:rwm"],
+  "devices": ["/dev/sda1","/dev/sda2","/dev/sdb1","/dev/mmcblk0p1","/dev/i2c-1"],
   "full_access": true,
   "url":"https://community.home-assistant.io/t/add-on-hassos-i2c-configurator/264167",
   "boot": "manual",
