@@ -1,5 +1,6 @@
 | Version | Change |
 |---|---|
+| 0.11 | removing support for deprecated non-protected mode, and increasing to sec level 6! |
 | 0.10 | Support new Addon API |
 | 0.9 | Support for Raspian |
 | 0.8 | Do not run on startup |

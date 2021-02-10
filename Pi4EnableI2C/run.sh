@@ -27,7 +27,9 @@ until false; do
       return;
     fi
     umount /tmp/$partition 2>/dev/null
-    mount /dev/$partition /tmp/$partition;
+    result=$(mount /dev/$partition /tmp/$partition 2>&1);
+    echo $result
+    [[ "$result" == *"root"* ]] && echo "Detected Protection Mode is enabled. Disable Protection Mode in Info Screen."
     if [ -e /tmp/$partition/config.txt ]; then
       mkdir -p /tmp/$partition/CONFIG/modules;
       echo i2c-dev >/tmp/$partition/CONFIG/modules/rpi-i2c.conf;
