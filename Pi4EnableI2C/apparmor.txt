@@ -5,12 +5,12 @@ profile hassosi2cconfiguratoraddon flags=(attach_disconnected,mediate_deleted) {
   
   capability,
   file,
-  mount options=(user,rw,noatime) /dev/sda1 /tmp/sda1,
-  mount options=(user,rw,noatime) /dev/sda2 /tmp/sda2,
-  mount options=(user,rw,noatime) /dev/sdb1 /tmp/sdb1,
-  mount options=(user,rw,noatime) /dev/sdb2 /tmp/sdb2,
-  mount options=(user,rw,noatime) /dev/mmcblk0p1 /tmp/mmcblk0p1,
-  mount options=(user,rw,noatime) /dev/mmcblk0p2 /tmp/mmcblk0p2,
+  mount options=(user,rw,noatime) /dev/sda1,
+  mount options=(user,rw,noatime) /dev/sda2,
+  mount options=(user,rw,noatime) /dev/sdb1,
+  mount options=(user,rw,noatime) /dev/sdb2,
+  mount options=(user,rw,noatime) /dev/mmcblk0p1,
+  mount options=(user,rw,noatime) /dev/mmcblk0p2,
 
   mount,
   umount,
