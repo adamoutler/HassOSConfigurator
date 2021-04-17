@@ -10,7 +10,6 @@
   "app_armor": false,
   "privileged": ["SYS_ADMIN"],
   "stage": "experimental",
-  "devices": ["/dev/sda1","/dev/sdb1","/dev/mmcblk0p1"],
   "full_access": true,
   "url":"https://community.home-assistant.io/t/add-on-hassos-i2c-configurator/264167",
   "boot": "manual",
