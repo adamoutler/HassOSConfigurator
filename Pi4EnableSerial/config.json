@@ -8,7 +8,7 @@
   "url":"https://community.home-assistant.io/t/add-on-hassos-serial-configurator/264169",
   "stage": "experimental",
   "ingress": true,
-  "full_access" true,
+  "full_access": true,
   "boot": "manual",
   "options": {},
   "schema": {}
