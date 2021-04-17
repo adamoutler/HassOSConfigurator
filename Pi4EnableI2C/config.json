@@ -8,6 +8,7 @@
   "auth_api": true,
   "ingress": true,
   "app_armor": false,
+  "devices": ["/dev/sda1","/dev/sdb1","/dev/mmcblk0p1"],
   "privileged": ["SYS_ADMIN"],
   "stage": "experimental",
   "full_access": true,
