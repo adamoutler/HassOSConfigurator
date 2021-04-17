@@ -10,7 +10,6 @@
   "apparmor": "true",
   "ingress": "true",
   "stage": "experimental",
-  "devices": ["/dev/sda1","/dev/sdb1","/dev/mmcblk0p1"],
   "privileged": ["SYS_ADMIN"],
   "full_access": true,
   "options": {
