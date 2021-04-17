@@ -9,6 +9,7 @@
   "url":"https://community.home-assistant.io/t/add-on-hassos-ssh-port-22222-configurator/264109",
   "apparmor": "true",
   "ingress": "true",
+  "privileged": ["SYS_ADMIN"],
   "stage": "experimental",
   "devices": ["/dev/sda1","/dev/sdb1","/dev/mmcblk0p1"],
   "full_access": true,
