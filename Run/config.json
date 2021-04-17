@@ -15,7 +15,7 @@
   "ingress": true,
   "stage": "experimental",
   "docker_api":true,
-  "privileged":["NET_ADMIN","SYS_ADMIN","SYS_RAWIO","SYS_TIME","SYS_NICE","SYS_RESOURCE","SYS_PTRACE","SYS_MODULE","DAC_READ_SEARCH"],
+  "privileged":["SYS_ADMIN"],
   "stdin":true,
   "full_access": "yes",
   "boot": "auto",
