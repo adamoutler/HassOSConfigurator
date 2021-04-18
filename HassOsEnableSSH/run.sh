@@ -12,7 +12,6 @@ set +e
     while true; do sleep 99999; done;
   fi;
 
-
   performWork () {
     partition=$1
     mount /dev/$partition /tmp/$partition 2>/dev/null
