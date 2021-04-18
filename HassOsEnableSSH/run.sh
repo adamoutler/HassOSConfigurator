@@ -6,9 +6,9 @@ key=$(cat options.json |jq -r '.SSHKey')
 until false; do
 set +e
   mkdir /tmp 2>/dev/null
-  mkdir /tmp/mmcblk0p1 /tmp/sda1 2> /dev/null
-  if [ ! -e /dev/sda1 ] && [ ! -e /dev/mmcblk0p1 ]  && [ ! -e /dev/sdb1 ] ; then 
-    echo "nothing to do. I can't find a /dev/sda1, /dev/sdb1, or /dev/mmcblk0p1";
+  mkdir /tmp/mmcblk0p1 /tmp/sda1 /tmp/sdb1 /tmp/nvme0n1p1 2> /dev/null
+  if [ ! -e /dev/sda1 ] && [ ! -e /dev/mmcblk0p1 ] && [ ! -e /dev/sdb1 ] && [ ! -e /dev/nvme0n1p1 ] ; then 
+    echo "nothing to do. I can't find a /dev/sda1, /dev/sdb1, /dev/mmcblk0p1 or /dev/nvme0n1p1";
     while true; do sleep 99999; done;
   fi;
 
@@ -32,6 +32,7 @@ set +e
   performWork sda1
   performWork sdb1
   performWork mmcblk0p1
+  performWork nvme0n1p1
 
   echo "This Configurator did it's job. Perform a hard-power-off now. This configurator only works once and is no longer needed."
   sleep 99999;
