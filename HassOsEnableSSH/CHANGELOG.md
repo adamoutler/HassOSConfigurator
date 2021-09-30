@@ -1,5 +1,6 @@
 | Version | Change |
 |---|---|
+| 0.8 | Support for mmcblk1p1 |
 | 0.7 | Support new Addon API |
 | 0.6 | Support for x86 |
 | 0.5 | Incresed security to absolute maximum because, why not? |
