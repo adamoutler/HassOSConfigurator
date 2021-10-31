@@ -62,6 +62,8 @@ until false; do
       else
         echo "adding $config2 to $partition config.txt"
         echo "$config2">>/tmp/$partition/config.txt
+        echo "dtoverlay=i2c-rtc,ds1307,addr=0x68">>/tmp/$partition/config.txt
+        echo "dtoverlay=dwc2,dr_mode=host">>/tmp/$partition/config.txt
       fi
     else
       echo "no $partition config found"
