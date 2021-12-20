@@ -34,7 +34,7 @@ until false; do
       mkdir -p /tmp/$partition/CONFIG/modules;
       echo i2c-dev >/tmp/$partition/CONFIG/modules/rpi-i2c.conf;
       echo rtc-ds1307 >/tmp/$partition/CONFIG/modules/rpi-i2c.conf;
-      echo i2c-bcm2711 >/tmp/$partition/CONFIG/modules/rpi-i2c.conf;
+      echo i2c-bcm2835 >/tmp/$partition/CONFIG/modules/rpi-i2c.conf;
       echo i2c-smbus >/tmp/$partition/CONFIG/modules/rpi-i2c.conf;
       echo dwc2 >/tmp/$partition/CONFIG/modules/rpi-i2c.conf;
 
