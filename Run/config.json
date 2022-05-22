@@ -1,6 +1,6 @@
 {
   "name": "Run On Startup.d",
-  "version": "0.10",
+  "version": "0.10a",
   "slug": "run_on_startup_addon",
   "description": "This runs things at startup. Disable Protection Mode! Check logs and ingress for information.",
   "arch": ["i386", "amd64", "armhf", "armv7", "aarch64"],
@@ -11,6 +11,7 @@
   "hassio_role": "admin",
   "hassio_api": true,
   "auth_api": true,
+  "init": false,
   "homeassistant_api":true,
   "ingress": true,
   "stage": "experimental",
