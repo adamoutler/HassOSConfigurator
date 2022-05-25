@@ -1,6 +1,6 @@
 {
   "name": "HassOS SSH port 22222 Configurator",
-  "version": "0.9",
+  "version": "0.9.1",
   "slug": "hassos_ssh_configurator_addon",
   "description": "This enables the SSH HassOS Console on port 22222. Only for Home Assistatant OS.",
   "arch": ["amd64", "i386", "armhf", "armv7", "aarch64"],
@@ -8,6 +8,7 @@
   "boot": "manual",
   "url":"https://community.home-assistant.io/t/add-on-hassos-ssh-port-22222-configurator/264109",
   "apparmor": "true",
+  "init": false,
   "ingress": "true",
   "stage": "experimental",
   "privileged": ["SYS_ADMIN"],
