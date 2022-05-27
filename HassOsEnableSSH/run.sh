@@ -6,7 +6,7 @@ key=$(cat options.json |jq -r '.SSHKey')
 until false; do
 set +e
   mkdir /tmp 2>/dev/null
-  mkdir /tmp/vda1 /tmp/mmcblk0p1 /temp/mmcblk1p1 /tmp/sda1 /tmp/sdb1 /tmp/nvme0n1p1 2> /dev/null
+  mkdir /tmp/vda1 /tmp/mmcblk0p1 /tmp/mmcblk1p1 /tmp/sda1 /tmp/sdb1 /tmp/nvme0n1p1 2> /dev/null
   if [ ! -e /dev/sda1 ] && [ ! -e /dev/vda1 ] && [ ! -e /dev/mmcblk0p1 ] && [ ! -e /dev/mmcblk1p1 ] && [ ! -e /dev/sdb1 ] && [ ! -e /dev/nvme0n1p1 ] ; then 
     echo "nothing to do. I can't find a /dev/vda1, /dev/sda1, /dev/sdb1, /dev/mmcblk0p1 /dev/mmcblk1p1 or /dev/nvme0n1p1";
     while true; do sleep 99999; done;
