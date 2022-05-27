@@ -1,6 +1,6 @@
 {
   "name": "HassOS SSH port 22222 Configurator",
-  "version": "0.9.1",
+  "version": "0.9.1a",
   "slug": "hassos_ssh_configurator_addon",
   "description": "This enables the SSH HassOS Console on port 22222. Only for Home Assistatant OS.",
   "arch": ["amd64", "i386", "armhf", "armv7", "aarch64"],
