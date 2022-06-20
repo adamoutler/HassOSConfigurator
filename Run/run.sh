@@ -15,6 +15,7 @@ if [ $? != 0 ]; then
  while true; do sleep 9999; done;
 fi
 
+logOption="";
 #Sleep for delay period
 delay=$(cat options.json |jq -r '."Seconds to wait before startup scripts execute"')
 createScripts=$(cat options.json |jq -r '."Create example scripts in /config/startup/startup.d"')
