@@ -14,7 +14,7 @@
   "privileged": ["SYS_ADMIN"],
   "full_access": true,
   "options": {
-    "SSHKey": "ssh-rsa AAAAB3NzaEXAMPLEexampleEXAMPLEexample/S30VTG0JMTdo/Fj root@example
+    "SSHKey": "Insert the full contents (i.e. ssh-rsa AAA...) of your public ssh key (id_rsa.pub, id_ecdsa.pub, ...) here."
   },
   "schema": {
     "SSHKey": "str"
