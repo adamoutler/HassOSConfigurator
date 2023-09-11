@@ -1,6 +1,6 @@
 {
   "name": "HassOS SSH port 22222 Configurator",
-  "version": "0.9.1a",
+  "version": "0.9.2b",
   "slug": "hassos_ssh_configurator_addon",
   "description": "This enables the SSH HassOS Console on port 22222. Only for Home Assistant OS.",
   "arch": ["amd64", "i386", "armhf", "armv7", "aarch64"],
@@ -14,7 +14,7 @@
   "privileged": ["SYS_ADMIN"],
   "full_access": true,
   "options": {
-    "SSHKey": "Insert the full contents (i.e. ssh-rsa AAA...) of your public ssh key (id_rsa.pub, id_ecdsa.pub, ...) here."
+    "SSHKey": "ssh-rsa AAA.. Insert the full contents (i.e. ssh-rsa AAA...) of your public ssh key (id_rsa.pub, id_ecdsa.pub, ...) here."
   },
   "schema": {
     "SSHKey": "str"
