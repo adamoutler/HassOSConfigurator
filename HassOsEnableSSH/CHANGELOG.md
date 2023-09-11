@@ -1,5 +1,6 @@
 | Version | Change |
 |---|---|
+| 0.9.2b | Add skip/success messages and obviously dummy default key |
 | 0.9.1a | Fix for changes in HAOS docker. Fix for mmcblk1p1 |
 | 0.9 | Support for mmcblk1p1 |
 | 0.7 | Support new Addon API |
