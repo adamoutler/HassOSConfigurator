@@ -5,6 +5,9 @@ HassOS SSH Port 22222 Configurator requires configuration. Copy your public key 
 ```
 SSHKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDGTlRAfhm9BIV6l6sOubRgeCY0wRhYQVfB3QBWFl2ELpeAnTHwRYY+4pSP1Nu7FuZqAzDyZkssmFkbXHJGqi6EAnAkRLsKhzvDKo5WSXfEQdl2kSN5bgU/e37GfwqG4ChEfY56gwu+tdHtt4eIrzKpmUKqFZWJaGoeI9sHptQR9QNitEsm0krkOcK0VLFLTeau+HOO1A4plcLjBB9Y43SFjth/Ouke+DVGaBO2LYNc8U0S4EiHT6KdRXS4iIwYjXMw6SEsT7eP9IWQObQ4ZgyG0cHO/6ArxJ0fyOcAI29sLzM9466ID0mTaJWHriTRf6Lxhpdd/S30VTG0JMTdo/Fj  root@HLAB-A17"
 ```
+
+(PLEASE NOTE! In recent versions of Home Assistant, you do NOT NEED TO ADD the `SSHKey:` yaml key, UNLESS you select `Edit In YAML` from the `Configuration` 3-dot menu. In other words, just paste your double-quoted SSH public key directly into the field provided. You may want to select `Edit In YAML` to validate that the final YAML passed to the add-on is as expected).
+
 After saving, Home Assistant may change your input to look like this
 ![image](https://raw.githubusercontent.com/adamoutler/HassOSConfigurator/main/gitResources/configuration.png)
 
