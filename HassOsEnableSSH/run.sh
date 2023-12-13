@@ -53,7 +53,7 @@ partitions=(
   mmcblk0p1
   mmcblk1p1
   nvme0n1p1
-  xvda1
+  xvda8
 )
 for partition in "${partitions[@]}"; do
   copyKeyToDevicePartition "${partition}"
