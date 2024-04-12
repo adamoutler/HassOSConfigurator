@@ -13,8 +13,8 @@ until false; do
   mkdir /tmp 2>/dev/null
 
   ls -al /dev/ 2>&1
-  mkdir /tmp/mmcblk0p1 /tmp/sda1 2> /dev/null
-  if [ ! -e /dev/sda1 ] && [ ! -e /dev/sdb1 ] && [ ! -e /dev/mmcblk0p1 ]; then 
+  mkdir /tmp/nvme0n1p1 /tmp/mmcblk0p1 /tmp/sda1 /tmp/sdb1 2> /dev/null
+  if [ ! -e /dev/sda1 ] && [ ! -e /dev/sdb1 ] && [ ! -e /dev/mmcblk0p1 ] && [ ! -e /dev/nvme0n1p1 ]; then 
     echo "nothing to do. Is protection mode enabled?  You can't run this without disabling protection mode";
     while true; do sleep 99999; done;
   fi;
@@ -71,6 +71,7 @@ until false; do
     performWork sda1
     performWork sdb1
     performWork mmcblk0p1
+    performWork nvme0n1p1
     echo "This Configurator did it's job. Perform a hard-power-off reboot now."
     echo "You will need to reboot twice total, once to place the files, and again to activate the I2C."
   fi
