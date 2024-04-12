@@ -1,5 +1,6 @@
 | Version | Change |
 |---|---|
+| 0.14 | Add nvme0n1p1 |
 | 0.13 | cleanup error in supervisor for device access with full access |
 | 0.11 | removing support for deprecated non-protected mode, and increasing to sec level 6! |
 | 0.10 | Support new Addon API |
