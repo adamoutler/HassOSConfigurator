@@ -12,7 +12,7 @@ After saving, Home Assistant may change your input to look like this
 ![image](https://raw.githubusercontent.com/adamoutler/HassOSConfigurator/main/gitResources/configuration.png)
 
 # Support
-If problems are encountered please get all "Karen" in the foums and make sure to display attitude, because developers love that.  Alternatively, you can provide a log and tell us the problem, what you did, the model of your device, and what happened differently than what you expected.
+If problems are encountered please get all "Karen" in the forums and make sure to display attitude, because developers love that.  Alternatively, you can provide a log and tell us the problem, what you did, the model of your device, and what happened differently than what you expected.
 
 Support is provided on the Home Assistant Community forums [here](https://community.home-assistant.io/t/add-on-hassos-ssh-port-22222-configurator/264109)
 
