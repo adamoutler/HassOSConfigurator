@@ -51,6 +51,7 @@ partitions=(
   sda1
   sdb1
   mmcblk0p1
+  mmcblk0p2
   mmcblk1p1
   nvme0n1p1
   xvda8
